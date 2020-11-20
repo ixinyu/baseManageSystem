@@ -1,38 +1,46 @@
 <template>
-  <div >
+  <div class="sidebar">
     <el-menu
       mode="vertical"
-      @select='select'>
-      <sidebarItem v-for="route in routes" :key="route.path" :item="route" :basePath="route.path" />
+      background-color="#545c64"
+      text-color="#fff"
+      active-text-color="#ffd04b"
+      @select="select"
+    >
+      <sidebarItem v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
     </el-menu>
   </div>
 </template>
 
 <script>
-import sidebarItem from './sidebarItem';
+import sidebarItem from './sidebarItem'
 export default {
-  name:'sidebar',
-  components:{
+  name: 'Sidebar',
+  components: {
     sidebarItem
   },
-  computed:{
-    routes(){
+  data() {
+    return {
+    }
+  },
+  computed: {
+    routes() {
       // console.log(this.$router.options.routes)
       return this.$router.options.routes
     }
   },
-  data(){
-    return{
-    }
-  },
-  methods:{
-    select(key, keyPath){
-       console.log(key, keyPath);
+  methods: {
+    select() {
+      if (this.$store.state.miniLayout) {
+        this.$store.commit('changeDrawer', false)
+      }
     }
   }
 }
 </script>
 
-<style>
-
+<style lang='scss' scoped>
+.sidebar{
+  background: #545c64;
+}
 </style>
