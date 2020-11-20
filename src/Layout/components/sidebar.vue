@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-    select() {
+    select() { //控制小屏幕选择之后，关闭抽屉
       if (this.$store.state.miniLayout) {
         this.$store.commit('changeDrawer', false)
       }
