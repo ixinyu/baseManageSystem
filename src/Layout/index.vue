@@ -60,8 +60,8 @@ export default {
     top: 0;
     left: 0;
     z-index: 8888;
-    border-top: 1px solid #eaecef;
-    background: pink;
+    border-bottom: 1px solid #eaecef;
+    background: #fff;
   }
     .lay_contain{
       height: 100%;
