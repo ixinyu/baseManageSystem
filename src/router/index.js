@@ -35,13 +35,13 @@ export const asyncRoutes = [
   //   meta: { title: '系统管理', icon: 'example', roles: ['admin'] },
   //   children: [
   //     {
-  //       path: '/customer/index',
+  //       path: 'customer/index',
   //       name: 'customer',
   //       component: () => import('@/views/customerList/customerList'),
   //       meta: { title: '人员管理', icon: 'eye' }
   //     },
   //     {
-  //       path: '/customer/organization',
+  //       path: 'customer/organization',
   //       name: 'organization',
   //       component: () => import('@/views/customerList/organization'),
   //       meta: { title: '组织架构管理', icon: 'table' }
