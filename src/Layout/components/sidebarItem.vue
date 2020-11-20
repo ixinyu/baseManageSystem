@@ -3,7 +3,7 @@
     <fragment v-if="hasOneShowingChild(item.children,item)&&!item.hidden">
       <router-link :to="resolvePath(onlyOneChild.path)">
         <el-menu-item :index='resolvePath(onlyOneChild.path)'>
-          <i :class="item.meta.icon"></i>
+          <i :class="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)"></i>
           <span slot="title">{{item.meta.title}} {{item.path}}</span>
         </el-menu-item>
       </router-link>
