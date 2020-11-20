@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .layout{
-  height: 100%;
+  //height: 100%;
   .nav_top{
     height: 80px;
     position: fixed;
@@ -66,43 +66,35 @@ export default {
     .lay_contain{
       height: 100%;
       width: 100%;
-      box-sizing: border-box;
+      //box-sizing: border-box;
       .el-drawer__wrapper{
         margin-top: 80px;
       }
-      
-      @media screen and (min-width: 992px) {
-        .nav_lf{
-          height: 100%;
-          width: 200px;
-          position: fixed;
-          top:80px;
-          // margin-top: 80px;
-          background: powderblue;
-          box-sizing: border-box;
-        }
-        .page{
-          height: calc(100vh - 80px);
-          width: calc(100% - 200px);
-          padding-left: 200px;
+      .nav_lf{
+        height: calc(100% - 80px);
+        width: 200px;
+        position: fixed;
+        top:80px;
+        bottom: 0;
+        overflow-y: auto;
+        box-sizing: border-box;
+      }
+     .page{
+          padding: 20px;
+          height: calc(100% - 120px);
+          width: 100%;
           margin-top: 80px;
-          background: peachpuff;
+          overflow-y: auto;
+          box-sizing: border-box;
+      }
+      @media screen and (min-width: 992px) {
+        .page{
+          padding-left: 200px;
         }
       }
       @media screen and (max-width:992px) { 
-        .nav_lf{
-          height: 100%;
-          width: 200px;
-          position: fixed;
-          top:80px;
-          // margin-top: 80px;
-          background: powderblue;
-        }
         .page{
-          height: 100%;
-          width: 100%;
-          margin-top: 80px;
-          background: peachpuff;
+          padding-left: 0;
         }
       }
     }
