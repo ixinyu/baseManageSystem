@@ -94,7 +94,7 @@ export default {
       }
       @media screen and (max-width:992px) { 
         .page{
-          padding-left: 0;
+          padding-left: 20px;
         }
       }
     }
