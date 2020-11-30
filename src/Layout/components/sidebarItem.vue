@@ -11,7 +11,7 @@
 
     <el-submenu v-else :index='resolvePath(item.path)'>
       <template slot="title">
-        <i :class="onlyOneChild.meta.icon||(item.meta&&item.meta.icon)"></i>
+        <i :class="item.meta && item.meta.icon"></i>
         <span>{{item.meta.title}}</span>
       </template>
       <sidebar-item
